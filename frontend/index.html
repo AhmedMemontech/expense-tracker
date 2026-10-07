@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Expense Tracker</h1>
+        <p class="subtitle">Keep track of your expenses</p>
+
+        <div class="card">
+            <h2>Add Expense</h2>
+
+            <form id="expenseForm">
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Expense name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Amount"
+                    min="0"
+                    step="0.01"
+                    required
+                >
+
+                <button type="submit">Add Expense</button>
+            </form>
+
+            <p id="message"></p>
+        </div>
+
+        <div class="card">
+            <div class="section-header">
+                <h2>Expenses</h2>
+                <span id="total">Total: ₹0</span>
+            </div>
+
+            <div id="expenseList">
+                <p class="empty">No expenses added yet.</p>
+            </div>
+        </div>
+
+        <div class="card health-card">
+            <h2>Backend Status</h2>
+
+            <button id="healthButton">Check Backend Health</button>
+
+            <p id="healthStatus">Status not checked yet.</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
